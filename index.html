@@ -24,7 +24,7 @@
       .enter()
         .append("g")
 
-    var a = [26.922070,75.778885];
+    var a = [75.77,26.91];
     var b = [-122.389809, 37.72728];
 
     var projection = d3.geo.mercator().scale(170).translate([750,520]);
@@ -33,12 +33,13 @@
     var areas = group.append("path")
       .attr("d", path)
       .attr("class", "area")
-      .attr("fill","#555");
+      .attr("fill","#888");
 
     var event = function(a,r){
       canvas.append("circle")
           .attr("cx", projection(a)[0])
           .attr("cy", projection(a)[1])
+          .attr("opacity","0.8")
           .attr("r",0)
           .attr("fill","steelblue")
           .transition()
@@ -51,8 +52,8 @@
 
     };
 
-    event(a,8);
-    event(b,10);
+    event(a,20);
+    event(b,25);
 
 
   });

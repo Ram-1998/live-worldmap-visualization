@@ -1,0 +1,32 @@
+{
+  "name": "live-worldmap-visualization",
+  "version": "1.0.0",
+  "description": "Live Twitter Stream Visualization",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanagarwal17/live-worldmap-visualization.git"
+  },
+  "keywords": [
+    "data-visualization",
+    "Node",
+    "Twitter"
+  ],
+  "author": "Karan Agarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karanagarwal17/live-worldmap-visualization/issues"
+  },
+  "homepage": "https://github.com/karanagarwal17/live-worldmap-visualization#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "dotenv": "^4.0.0",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
