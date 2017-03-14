@@ -35,6 +35,25 @@
       .attr("class", "area")
       .attr("fill","#555");
 
+    var event = function(a,r){
+      canvas.append("circle")
+          .attr("cx", projection(a)[0])
+          .attr("cy", projection(a)[1])
+          .attr("r",0)
+          .attr("fill","steelblue")
+          .transition()
+            .duration(2000)
+            .delay(0)
+            .attr("r",r)
+          .transition()
+            .duration(0)
+            .attr("r",0)
+
+    };
+
+    event(a,8);
+    event(b,10);
+
 
   });
 
