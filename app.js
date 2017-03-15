@@ -7,12 +7,12 @@ var io = require('socket.io')(http);
 var count = 0;
 
 app.get('/', function(req, res){
-  //res.sendFile(__dirname + '/custom.geo.json');
- res.send('<h1>Live Worldmap Visualisation</h1>');
+  res.sendFile(__dirname + '/index.html');
+  //res.send('<h1>Live Worldmap Visualisation</h1>');
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen( process.env.PORT, function(){
+  console.log('listening on ' + process.env.PORT);
 });
 
 var client = new Twitter({
@@ -43,7 +43,7 @@ io.on('connection', function(socket){
     socket.on('disconnect', function(){
       console.log('user disconnected ' + count);
       count--;
-      
+
       if(count == 0){
         stream.destroy();
       }
