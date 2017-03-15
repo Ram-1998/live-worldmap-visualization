@@ -7,7 +7,7 @@ var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
   //res.sendFile(__dirname + '/custom.geo.json');
- //res.sendFile(__dirname + '/index.html');
+ res.send('<h1>Live Worldmap Visualisation</h1>');
 });
 
 http.listen(3000, function(){
