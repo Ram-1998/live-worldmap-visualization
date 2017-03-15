@@ -33,7 +33,7 @@
     var areas = group.append("path")
       .attr("d", path)
       .attr("class", "area")
-      .attr("fill","#888");
+      .attr("fill","#999");
 
     var event = function(a,r){
       canvas.append("circle")
@@ -43,7 +43,7 @@
           .attr("r",0)
           .attr("fill","steelblue")
           .transition()
-            .duration(2000)
+            .duration( r * 100)
             .delay(0)
             .attr("r",r)
           .transition()
