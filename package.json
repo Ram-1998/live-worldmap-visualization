@@ -4,7 +4,8 @@
   "description": "Live Twitter Stream Visualization",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
