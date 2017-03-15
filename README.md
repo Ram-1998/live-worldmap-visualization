@@ -16,6 +16,8 @@ Corresponding to every data a circle is plotted on the map whose location depend
 
 ## Technologies Used
 
-* Node.Js - for server side programming
-* D3.Js - for Data Visualization
-* Twitter Stream API - for getting the tweet data in real-time
+* Node.Js - for server side programming.
+* D3.Js - for Data Visualization.
+* Twitter Stream API - for getting the tweet data in real-time.
+* Heroku - for deploying the back-end of the webapp.
+* Socket.io - for sending the tweet data to the client-side.
