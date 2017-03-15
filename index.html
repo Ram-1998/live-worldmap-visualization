@@ -58,7 +58,7 @@
 
     };
 
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://live-worldmap-visualization.herokuapp.com:3000');
 
     socket.on('twitter', function(data){
       event(data.coordinates.coordinates,data.radius);
