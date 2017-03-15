@@ -1,8 +1,12 @@
 # Twitter Live Data Visualization
 
+
 ## Live Hosts
 
-The project is hosted on http://karanagarwal.me/live-worldmap-visualization .
+
+The project is hosted on http://karanagarwal.me/live-worldmap-visualization.
+It can also be accessed through http://live-worldmap-visualization.herokuapp.com/.
+
 
 ## Description
 
@@ -12,7 +16,10 @@ It then plots the tweets on the map according to their co-ordinates and the numb
 
 Corresponding to every data a circle is plotted on the map whose location depends on the co-ordinates of the tweet and the radius is a function of the number of followers.
 
+
 ![Image of Twitter Live Data Visualization](live-worldmap.jpeg)
+
+The above image is a still form the app.
 
 ## Technologies Used
 
