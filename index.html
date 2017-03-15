@@ -4,6 +4,8 @@
 <head>
   <title>D3 Tutorial</title>
   <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
 </head>
 
 <body>
@@ -12,6 +14,10 @@
   var width = 1500,
     height = 750,
     padding = 50;
+
+  var scale = d3.scale.linear()
+    .domain([0,200])
+    .range([5,55]);
 
   var canvas = d3.select("body").append("svg")
     .attr("width",width)
@@ -43,19 +49,20 @@
           .attr("r",0)
           .attr("fill","steelblue")
           .transition()
-            .duration( r * 100)
+            .duration( scale(r) * 100)
             .delay(0)
-            .attr("r",r)
+            .attr("r",scale(r))
           .transition()
             .duration(0)
             .attr("r",0)
 
     };
 
-    event(a,20);
-    event(b,25);
+    var socket = io.connect('http://localhost:3000');
 
-
+    socket.on('twitter', function(data){
+      event(data.coordinates.coordinates,data.radius);
+    });
   });
 
   </script>
