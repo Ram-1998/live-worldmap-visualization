@@ -41,12 +41,7 @@ io.on('connection', function(socket){
       throw error;
     });
     socket.on('disconnect', function(){
-      console.log('user disconnected ' + count);
-      count--;
-
-      if(count == 0){
         stream.destroy();
-      }
     });
   });
 });
