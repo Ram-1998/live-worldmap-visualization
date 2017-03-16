@@ -3,7 +3,7 @@
 
 ## Live Hosts
 
-**For the live code, wait for a few seconds for the server to start**
+**For the live code, wait for a few seconds for the server to start.**  
 The project is hosted on http://karanagarwal.me/live-worldmap-visualization.  
 It can also be accessed through http://live-worldmap-visualization.herokuapp.com/.
 
