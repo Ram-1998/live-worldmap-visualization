@@ -28,7 +28,7 @@ io.on('connection', function(socket){
   count++;
   client.stream('statuses/filter', {locations: '-180,-90,180,90'}, function(stream) {
   	stream.on('data', function(data) {
-  		if (data.coordinates) {
+      if (data.coordinates) {
   			console.log(data.coordinates.coordinates);
         var r = Math.sqrt(data.user.followers_count);
   			console.log(r);
